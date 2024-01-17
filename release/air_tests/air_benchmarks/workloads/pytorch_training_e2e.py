@@ -115,7 +115,7 @@ def main(data_size_gb: int, num_epochs=2, num_workers=1, smoke_test: bool = Fals
         scaling_config=ScalingConfig(
             num_workers=num_workers, use_gpu=int(not smoke_test)
         ),
-        run_config=RunConfig(storage_path="/mnt/cluster_storage"),
+        run_config=RunConfig(storage_path="~/mnt/cluster_storage"),
     )
     trainer.fit()
 
